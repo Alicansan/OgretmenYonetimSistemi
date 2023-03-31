@@ -1,0 +1,43 @@
+﻿@model OgretmenYonetimSistemi.Models.OgretmenGuncelleViewModel
+@{
+}
+
+<h1>Öğretmen Güncelleme</h1>
+<form method="post" action="View" class="mt-4">
+    <div class="mb-3">
+        <label for="" class="form-label">Ad</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Ad</label>
+        <input type="text" class="form-control" asp-for="Ad">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Soyad</label>
+        <input type="text" class="form-control" asp-for="Soyad">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tc Kimlik No</label>
+        <input type="text" class="form-control" asp-for="TcNo">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email Adresi</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Telefon</label>
+        <input type="text" class="form-control" asp-for="Telefon">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Ders</label>
+        <input type="text" class="form-control" asp-for="Ders">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Maaş</label>
+        <input type="number" class="form-control" asp-for="Maas">
+    </div>
+
+  <button type="submit" class="btn btn-primary">Güncelle</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="Delete"asp-controller="Ogretmenler">Sil</button>
+</form>

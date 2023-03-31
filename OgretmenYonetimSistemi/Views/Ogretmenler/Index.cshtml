@@ -1,0 +1,40 @@
+﻿@model List<OgretmenYonetimSistemi.Models.Domain.Ogretmen>
+
+@{
+}
+
+
+<h1>Öğretmenler</h1>
+
+<table class="table"> 
+    <thead> 
+        <tr>    
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Tc No</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Ders</th>
+            <th>Maas</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ogretmen in Model)
+        {
+            <tr>
+                <td>@ogretmen.Id</td>
+                <td>@ogretmen.Ad</td>
+                <td>@ogretmen.Soyad</td>
+                <td>@ogretmen.TcNo</td>
+                <td>@ogretmen.Email</td>
+                <td>@ogretmen.Telefon</td>
+                <td>@ogretmen.Ders</td>
+                <td>@ogretmen.Maas</td>
+                <td><a href="Ogretmenler/View/@ogretmen.Id">Göster</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
